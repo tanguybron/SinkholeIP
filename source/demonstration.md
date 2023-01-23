@@ -9,4 +9,4 @@ Voici ce que nous obtenons :
 
 ![scan nmap](images/nmap_scan.png)
 
-Nous voyons bien à droite que notre sinkhole a reçu les requêtes étant à destination des adresses IP privées n'appartenant pas au réseau 192.168.45.0/24. 
+Nous voyons bien *(en zoomant)* à droite que notre sinkhole a reçu les requêtes étant à destination des adresses IP privées n'appartenant pas au réseau 192.168.45.0/24. 
