@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sinkhole IP : Explications &mdash; Documentation SinkholeIP 0.0</title>
+  <title>Démonstration &mdash; Documentation SinkholeIP 0.0</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="_static/favicon.ico"/>
@@ -20,8 +20,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
-    <link rel="next" title="Mise en place" href="mise_en_place.html" />
-    <link rel="prev" title="Créer un Sinkhole IP" href="index.html" /> 
+    <link rel="prev" title="Mise en place" href="mise_en_place.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -40,17 +39,13 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">cours</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Sinkhole IP : Explications</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#objectifs">Objectifs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#organisation-du-reseau">Organisation du réseau</a></li>
-</ul>
-</li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sinkhole_explication.html">Sinkhole IP : Explications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mise_en_place.html">Mise en place</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">démonstration</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="demonstration.html">Démonstration</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Démonstration</a></li>
 </ul>
 
         </div>
@@ -67,9 +62,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active">Sinkhole IP : Explications</li>
+      <li class="breadcrumb-item active">Démonstration</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/sinkhole_explication.md.txt" rel="nofollow"> Afficher la source de la page</a>
+            <a href="_sources/demonstration.md.txt" rel="nofollow"> Afficher la source de la page</a>
       </li>
   </ul>
   <hr/>
@@ -77,40 +72,16 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="sinkhole-ip-explications">
-<h1>Sinkhole IP : Explications<a class="headerlink" href="#sinkhole-ip-explications" title="Lien permanent vers ce titre"></a></h1>
-<section id="objectifs">
-<h2>Objectifs<a class="headerlink" href="#objectifs" title="Lien permanent vers ce titre"></a></h2>
-<ul class="simple">
-<li><p>Repérer les requêtes sur le réseau qui partent à destination d’autres réseaux privés (dont la machine source ne fait pas partie)</p></li>
-<li><p>Repérer les requêtes à destination des 3 réseaux privés existants :</p>
-<ul>
-<li><p>10.0.0.0/8</p></li>
-<li><p>172.16.0.0/12</p></li>
-<li><p>192.168.0.0/16</p></li>
-</ul>
-</li>
-<li><p>Envoyer les requêtes repérées à notre machine Sinkhole</p></li>
-</ul>
-</section>
-<section id="organisation-du-reseau">
-<h2>Organisation du réseau<a class="headerlink" href="#organisation-du-reseau" title="Lien permanent vers ce titre"></a></h2>
-<p><img alt="structure reseau" src="_images/struct_reseau.png" /></p>
-<p>Comme vous le voyez ci-dessus, nous aurons 3 Machines virtuelles :</p>
-<ul class="simple">
-<li><p><strong>client1</strong> : qui va lancer des scans réseaux pour potentiellement tenter de découvrir des machines sur des réseaux parallèles</p></li>
-<li><p><strong>frontal</strong> : qui fait le lien entre les clients du réseau et internet (toutes les requêtes à destination d’une autre plage IP que celle des machines (192.168.45.0/24) passeront par frontal).</p></li>
-<li><p><strong>sinkhole</strong> : notre machine sinkhole qui recevra toutes les requêtes envoyées par frontal si elles sont détectées comme allant vers d’autres réseau privés. Sinkhole ne redirigera pas les requêtes, on veut que ces dernières n’envoient aucune réponse à la machine attaquante (dans notre cas client1)</p></li>
-</ul>
-</section>
+  <section id="demonstration">
+<h1>Démonstration<a class="headerlink" href="#demonstration" title="Lien permanent vers ce titre"></a></h1>
+<p>voici une demo</p>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
-        <a href="index.html" class="btn btn-neutral float-left" title="Créer un Sinkhole IP" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
-        <a href="mise_en_place.html" class="btn btn-neutral float-right" title="Mise en place" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="mise_en_place.html" class="btn btn-neutral float-left" title="Mise en place" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
     </div>
 
   <hr/>

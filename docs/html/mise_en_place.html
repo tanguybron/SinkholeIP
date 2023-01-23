@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2. Mise en place &mdash; Documentation SinkholeIP 0.0</title>
+  <title>Mise en place &mdash; Documentation SinkholeIP 0.0</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="_static/favicon.ico"/>
@@ -20,7 +20,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
-    <link rel="prev" title="1. Sinkhole IP : Explications" href="sinkhole_explication.html" /> 
+    <link rel="next" title="Démonstration" href="demonstration.html" />
+    <link rel="prev" title="Sinkhole IP : Explications" href="sinkhole_explication.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -40,17 +41,23 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">cours</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="sinkhole_explication.html">1. Sinkhole IP : Explications</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Mise en place</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#les-machines-virtuelles">2.1. Les Machines Virtuelles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#mise-en-reseau">2.2. Mise en réseau</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#client-1">2.2.1. client 1 :</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#sinkhole">2.2.2. sinkhole :</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#frontal">2.2.3. frontal :</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sinkhole_explication.html">Sinkhole IP : Explications</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Mise en place</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#les-machines-virtuelles">Les Machines Virtuelles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mise-en-reseau">Mise en réseau</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#client-1">client 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sinkhole">sinkhole</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#recap-ou-en-est-on">Recap : où en est-on ?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rediriger-du-trafic-vers-sinkhole">Rediriger du trafic vers Sinkhole</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#frontal">frontal</a></li>
 </ul>
 </li>
 </ul>
 </li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">démonstration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="demonstration.html">Démonstration</a></li>
 </ul>
 
         </div>
@@ -67,7 +74,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active"><span class="section-number">2. </span>Mise en place</li>
+      <li class="breadcrumb-item active">Mise en place</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/mise_en_place.md.txt" rel="nofollow"> Afficher la source de la page</a>
       </li>
@@ -78,27 +85,54 @@
            <div itemprop="articleBody">
              
   <section id="mise-en-place">
-<h1><span class="section-number">2. </span>Mise en place<a class="headerlink" href="#mise-en-place" title="Lien permanent vers ce titre"></a></h1>
+<h1>Mise en place<a class="headerlink" href="#mise-en-place" title="Lien permanent vers ce titre"></a></h1>
 <section id="les-machines-virtuelles">
-<h2><span class="section-number">2.1. </span>Les Machines Virtuelles<a class="headerlink" href="#les-machines-virtuelles" title="Lien permanent vers ce titre"></a></h2>
+<h2>Les Machines Virtuelles<a class="headerlink" href="#les-machines-virtuelles" title="Lien permanent vers ce titre"></a></h2>
 <p>Nous avons choisi d’utiliser 3 machines virtuelles très basiques : une debian sans interface graphique avec un port 22 ouvert pour les connexions ssh depuis notre machine hôte afin de pouvoir utiliser notre terminal par défaut.</p>
 </section>
 <section id="mise-en-reseau">
-<h2><span class="section-number">2.2. </span>Mise en réseau<a class="headerlink" href="#mise-en-reseau" title="Lien permanent vers ce titre"></a></h2>
+<h2>Mise en réseau<a class="headerlink" href="#mise-en-reseau" title="Lien permanent vers ce titre"></a></h2>
 <p>Pour configurer les interfaces réseau sur nos machines debian, nous utilisons le fichier <code class="docutils literal notranslate"><span class="pre">/etc/network/interfaces</span></code></p>
 <section id="client-1">
-<h3><span class="section-number">2.2.1. </span>client 1 :<a class="headerlink" href="#client-1" title="Lien permanent vers ce titre"></a></h3>
+<h3>client 1<a class="headerlink" href="#client-1" title="Lien permanent vers ce titre"></a></h3>
 <p>Voici le fichier <code class="docutils literal notranslate"><span class="pre">/etc/network/interfaces</span></code> de notre machine client1 :</p>
-<p><img alt="structure reseau" src="_images/interfaces_client1.png" /></p>
+<p><img alt="interfaces client1" src="_images/interfaces_client1.png" /></p>
+<p>On voit ici que nous définissons (sur l’interface enp0s3) une adresse IP statique (<strong>192.168.45.2</strong>) accompagné d’un masque de sous-réseau (<strong>255.255.255.0</strong>), cela signifie que notre machine <strong>client1</strong> appartient au réseau 192.168.45.0/24, elle peut ainsi communiquer avec toutes les machines qui ont une adresse IP allant de 192.168.45.1 à 192.168.45.254 (les adresses 0 et 255 étant réservées respectivement à l’adresse du réseau et l’adresse de broadcast). Ainsi, si notre machine <strong>client1</strong> souhaite communiquer avec des machines ayant des adresse IP en dehors de cette plage, elle devra passer par une <strong>passerelle</strong> (<strong>gateway</strong>). Nous définissons notre <strong>gateway</strong> à 192.168.45.1 qui sera l’adresse de notre machine <strong>frontal</strong>.</p>
 </section>
 <section id="sinkhole">
-<h3><span class="section-number">2.2.2. </span>sinkhole :<a class="headerlink" href="#sinkhole" title="Lien permanent vers ce titre"></a></h3>
+<h3>sinkhole<a class="headerlink" href="#sinkhole" title="Lien permanent vers ce titre"></a></h3>
 <p>Voici le fichier <code class="docutils literal notranslate"><span class="pre">/etc/network/interfaces</span></code> de notre machine sinkhole :</p>
-<p><img alt="structure reseau" src="_images/interfaces_sinkhole.png" /></p>
+<p><img alt="interfaces sinkhole" src="_images/interfaces_sinkhole.png" /></p>
+<p>Pour cette configuration, nous remarquons qu’il s’agit de la même chose que client1, seulement cette fois l’adresse IP attribuée à notre sinkhole est 192.168.45.3 et aucune gateway n’est renseignée : nous avons vu précédemment que nous ne souhaitons pas rediriger les requêtes reçues (cf explication_sinkhole).</p>
+</section>
+<section id="recap-ou-en-est-on">
+<h3>Recap : où en est-on ?<a class="headerlink" href="#recap-ou-en-est-on" title="Lien permanent vers ce titre"></a></h3>
+<p>A ce stade :</p>
+<ul class="simple">
+<li><p>client1 et Sinkhole peuvent communiquer : les deux machines sont sur le même réseau (192.168.45.0/24)</p></li>
+<li><p>client1 peut passer par frontal pour avoir internet et envoyer des requêtes sur d’autres plages IP</p></li>
+</ul>
+</section>
+<section id="rediriger-du-trafic-vers-sinkhole">
+<h3>Rediriger du trafic vers Sinkhole<a class="headerlink" href="#rediriger-du-trafic-vers-sinkhole" title="Lien permanent vers ce titre"></a></h3>
+<p>C’est la machine frontal qui recoit le trafic destiné à d’autres plages IP, c’est donc frontal qui peut rediriger certaines requêtes en fonction de leurs destination notamment.
+Pour que notre machine accepte les redirections de paquets, nous devons faire la manipulation suivante :</p>
+<ul class="simple">
+<li><p>ouvrir le fichier <code class="docutils literal notranslate"><span class="pre">/etc/sysctl.conf</span></code></p></li>
+<li><p>ajouter ou décommenter la ligne <strong>net.ipv4.ip_forward = 1</strong></p></li>
+</ul>
+<p>Nous allons ensuite ajouter des règles de routage à notre machine pour savoir ce qu’elle redirige et par quelle interface réseau elle doit passer. Pour cela, nous allons utiliser des règles de routage. La syntaxe pour ajouter une règle de routage est :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ip route add &lt;réseau-demandé&gt; via &lt;ip-machine-destination&gt; dev &lt;interface&gt;
+</pre></div>
+</div>
+<p>Un problème, en exécutant cette commande tout fonctionne, mais une fois la machine redémarrée, notre règle de routage n’est plus présente. Pour ajouter de la persistence à tout cela, nous pouvons directement définir cette règle de routage dans le fichier <code class="docutils literal notranslate"><span class="pre">/etc/network/interfaces</span></code>.</p>
+<p>Pour cela il faut utiliser <code class="docutils literal notranslate"><span class="pre">post-up</span></code> suivi de la règle de routage afin de définir cette règle de routage une fois les interfaces montées.</p>
 </section>
 <section id="frontal">
-<h3><span class="section-number">2.2.3. </span>frontal :<a class="headerlink" href="#frontal" title="Lien permanent vers ce titre"></a></h3>
+<h3>frontal<a class="headerlink" href="#frontal" title="Lien permanent vers ce titre"></a></h3>
 <p>Voici le fichier <code class="docutils literal notranslate"><span class="pre">/etc/network/interfaces</span></code> de notre machine frontal :</p>
+<p><img alt="interfaces frontal" src="_images/interfaces_frontal.png" /></p>
+<p>Nous voyons 3 règles de routage : une pour chaque plage d’adresse IP privées possible.</p>
 </section>
 </section>
 </section>
@@ -107,7 +141,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
-        <a href="sinkhole_explication.html" class="btn btn-neutral float-left" title="1. Sinkhole IP : Explications" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="sinkhole_explication.html" class="btn btn-neutral float-left" title="Sinkhole IP : Explications" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="demonstration.html" class="btn btn-neutral float-right" title="Démonstration" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
