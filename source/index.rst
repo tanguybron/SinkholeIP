@@ -13,7 +13,7 @@ Les propos seront illustrés et démontrés à l'aide de machines virtuelles que
 .. toctree::
    :numbered:
    :maxdepth: 2
-   :caption: Cours
-
+   :caption: cours
+   
    sinkhole_explication
-   contexte
+   mise_en_place
