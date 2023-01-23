@@ -6,8 +6,17 @@ Nous avons choisi d'utiliser 3 machines virtuelles très basiques : une debian s
 
 ## Mise en réseau
 
-Pour configurer
+Pour configurer les interfaces réseau sur nos machines debian, nous utilisons le fichier ```/etc/network/interfaces```
 
 ### client 1 : 
 
+Voici le fichier ```/etc/network/interfaces``` de notre machine client1 :
+
+### sinkhole : 
+
+Voici le fichier ```/etc/network/interfaces``` de notre machine sinkhole :
+
+### frontal : 
+
+Voici le fichier ```/etc/network/interfaces``` de notre machine frontal :
 
