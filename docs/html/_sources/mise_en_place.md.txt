@@ -12,6 +12,8 @@ Pour configurer les interfaces réseau sur nos machines debian, nous utilisons l
 
 Voici le fichier ```/etc/network/interfaces``` de notre machine client1 :
 
+ajout screen
+
 ### sinkhole : 
 
 Voici le fichier ```/etc/network/interfaces``` de notre machine sinkhole :
