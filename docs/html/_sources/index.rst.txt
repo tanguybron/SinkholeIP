@@ -3,18 +3,17 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to SinkholeIP's documentation!
+Créer un Sinkhole IP
 ======================================
 
+Dans ce cours, vous trouverez une explication de ce qu'est un Sinkhole IP. 
+Les propos seront illustrés et démontrés à l'aide de machines virtuelles que vous pourrez télécharger.
+
+
 .. toctree::
+   :numbered:
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Cours
 
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   sinkhole_explication
+   contexte

@@ -17,7 +17,6 @@ release = '0.0'
 extensions = ['myst_parser',
         'sphinx_rtd_theme']
 
-templates_path = ['_templates']
 exclude_patterns = []
 
 language = 'fr'
@@ -32,5 +31,4 @@ html_theme_options = {
     'navigation_depth': -1,
     'includehidden': True,
 }
-html_static_path = ['_static']
 html_favicon = 'favicon.ico'
