@@ -19,6 +19,6 @@ Les propos seront illustrés et démontrés à l'aide de machines virtuelles que
 
 .. toctree::
    :maxdepth: 2
-   :caption: démonstration
+   :caption: mise en situation
    
    demonstration

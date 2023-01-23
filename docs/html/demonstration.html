@@ -43,7 +43,7 @@
 <li class="toctree-l1"><a class="reference internal" href="sinkhole_explication.html">Sinkhole IP : Explications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mise_en_place.html">Mise en place</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">démonstration</span></p>
+<p class="caption" role="heading"><span class="caption-text">mise en situation</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Démonstration</a></li>
 </ul>
@@ -74,7 +74,12 @@
              
   <section id="demonstration">
 <h1>Démonstration<a class="headerlink" href="#demonstration" title="Lien permanent vers ce titre"></a></h1>
-<p>voici une demo</p>
+<p>Lorsqu’un attaquant va avoir accès à une machine au sein d’un réseau (d’entreprise par exemple), il voudra tenter de faire des mouvements latéraux (c’est à dire découvrir de nouveau réseaux) afin de trouver de potentielles machines sensibles et potentiellement intéressantes pour lui.</p>
+<p>Un outil très connu pour faire cela est <strong>nmap</strong>. Nous allons prendre cet outil comme exemple afin de voir si notre Sinkhole fonctionne bien.
+Nous allons faire en sorte de scanner les machines ayant les adresses IP 192.168.45-46.2-4. Notre Sinkhole devrait recevoir les requêtes à destination des machines ayant des adresses IP comprises entre 192.168.46.2 et 192.168.46.4.</p>
+<p>Voici ce que nous obtenons :</p>
+<p><img alt="scan nmap" src="_images/nmap_scan.png" /></p>
+<p>Nous voyons bien à droite que notre sinkhole a reçu les requêtes étant à destination des adresses IP privées n’appartenant pas au réseau 192.168.45.0/24.</p>
 </section>
 
 
